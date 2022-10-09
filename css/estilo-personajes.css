@@ -1,0 +1,185 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --very-light-pink: #c7c7c7;
+    --text-input-field: #f7f7f7;
+    --hospital-green: #acd9b2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+body {
+    margin: 0;
+    font-family: "Quicksand", sans-serif;  
+}
+
+/*Estilos para el menú*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+/*Ocultar menú de hamburguesa en versión pc*/
+.menu {
+    display: none;
+}
+
+/*Aumentar el tamaño del logo*/
+.logo {
+    width: 120px;
+}
+
+/*Eliminar estilos predeterminados de <ul>*/
+.navbar-left ul,
+.navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    /*Acomodar el listado de manera horizontal*/
+    display: flex;
+    /*Centrar el texto*/
+    align-items: center;
+    height: 60px;
+}
+
+/*Ajustar el navbar-left para que se ajuste a la par con navbar-right*/
+.navbar-left {
+    display: flex;
+}
+
+/*Margen a la lista para separar un poco del logo*/
+.navbar-left ul {
+    margin-left: 20px;
+}
+
+/*Estilos del listado, eliminar puntos, decoración del texto*/
+.navbar-left ul li a,
+.navbar-right ul li a {
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/*Estilos al listado del menú al pasar el mouse*/
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover {
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+}
+
+/*Estilizando el texto del correo*/
+.navbar-email {
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    margin-right: 12px;
+}
+
+/*Cambiar posición del número del carrito*/
+.navbar-shopping-cart {
+    position: relative;
+}
+
+/*Estilizando el carrito de compra*/
+.navbar-shopping-cart div {
+    width: 16px;
+    height: 16px;
+    background-color: var(--hospital-green);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    margin-top: 20px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 26px;
+    place-content: center;
+}
+
+.character-card {
+    width: 240px;
+}
+
+.character-card img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.character-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.character-info figure {
+    margin: 0;
+}
+
+.character-info figure img {
+    width: 35px;
+    height: 35px;
+}
+
+.character-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.product-info div p:nth-child(2) {
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--very-light-pink)
+}
+
+@media (max-width: 640px) {
+    .menu {
+        display: block;
+    }
+
+    .navbar-left ul {
+        display: none;
+    }
+
+    .navbar-email {
+        display: none;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, 140px);
+        gap: 26px;
+
+    }
+
+    .character-card {
+        width: 140px;
+
+    }
+
+    .character-card img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+    }
+}
+
+

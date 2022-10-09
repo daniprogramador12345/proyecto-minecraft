@@ -1,0 +1,161 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+html{
+    background-image: url(/img/fom.jpg) ;
+    object-fit: cover;
+}
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --very-light-pink: #c7c7c7;
+  --text-input-field: #f7f7f7;
+  --hospital-green: #acd9b2;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+}
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;  
+}
+header{
+  margin-bottom: 50px;
+}
+
+/*Estilos para el menú*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--very-light-pink);
+  background-color: var(--white);
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+/*Ocultar menú de hamburguesa en versión pc*/
+.menu {
+  display: none;
+}
+
+/*Aumentar el tamaño del logo*/
+.logo {
+  width: 120px;
+}
+
+/*Eliminar estilos predeterminados de <ul>*/
+.navbar-left ul,
+.navbar-right ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  /*Acomodar el listado de manera horizontal*/
+  display: flex;
+  /*Centrar el texto*/
+  align-items: center;
+  height: 60px;
+}
+
+/*Ajustar el navbar-left para que se ajuste a la par con navbar-right*/
+.navbar-left {
+  display: flex;
+}
+
+/*Margen a la lista para separar un poco del logo*/
+.navbar-left ul {
+  margin-left: 20px;
+}
+
+/*Estilos del listado, eliminar puntos, decoración del texto*/
+.navbar-left ul li a,
+.navbar-right ul li a {
+  text-decoration: none;
+  color: var(--very-light-pink);
+  border: 1px solid var(--white);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/*Estilos al listado del menú al pasar el mouse*/
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover {
+  border: 1px solid var(--hospital-green);
+  color: var(--hospital-green);
+}
+
+/*Estilizando el texto del correo*/
+.navbar-email {
+  color: var(--very-light-pink);
+  font-size: var(--sm);
+  margin-right: 12px;
+}
+
+/*Cambiar posición del número del carrito*/
+.navbar-shopping-cart {
+  position: relative;
+}
+
+/*Estilizando el carrito de compra*/
+.navbar-shopping-cart div {
+  width: 16px;
+  height: 16px;
+  background-color: var(--hospital-green);
+  border-radius: 50%;
+  font-size: var(--sm);
+  font-weight: bold;
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-principal{
+  margin: 5px 5px 5px 5px;
+  display: grid;
+  grid-template-columns: 350px;
+  grid-template-rows: 320px;
+  justify-content: center;
+}
+.contenedor-principal h1{
+  text-align: center;
+}
+.contenedor-principal p{
+  text-align: center;
+  font-size: medium;
+}
+.video-personaje{
+  width: 320px;
+  height: 250px;
+}
+@media screen and (min-width: 768px){
+  .contenedor-principal{
+    margin: 5px 5px 5px 5px;
+    display: grid;
+    grid-template-columns: 750px;
+    grid-template-rows: 320px;
+    justify-content: center;
+  }  
+  .video-personaje{
+    width: 750px;
+    height: 320px;
+  }
+}
+@media (max-width: 640px) {
+  .menu {
+      display: block;
+  }
+
+  .navbar-left ul {
+      display: none;
+  }
+
+  .navbar-email {
+      display: none;
+  }
+}
